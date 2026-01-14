@@ -19,36 +19,50 @@
     -->
 
     <!-- 要素囲む大枠はレイアウト扱い「l-xxx」と命名します -->
-    <header class="l-header">
-        <!-- ロゴ -->
-        <img src="C:\Users\yamas\iCloudDrive\halu_\CSS\headerLogo1.png" alt="logo" class="p-logo">
-
-        <!-- アイコン -->
-         <div class="p-hedderLink">
-            <img src="C:\Users\yamas\iCloudDrive\halu_\CSS\icon_Instagram_s.png" alt="instagram" class="p-hedderLink__instagram">
-            <img src="C:\Users\yamas\iCloudDrive\halu_\CSS\icon_minne_s.png" alt="minnne" class="p-hedderLink__minne">
-         </div>
-    </header>
-
+    
     <!-- 
         各セクションからその子要素までプロジェクト扱い「p-xxx」と命名します 
         （※ちなみに親要素の名前を絶対引き継がないといけない訳ではない！）
     -->
-    <section class="p-top">
+    <!-- <section class="p-top">
         <div class="p-title">
             <img class="p-title__image" src="C:\Users\yamas\iCloudDrive\halu_\CSS\maintitle.png" alt="logo">
             <h1 class="p-title__text u-font-size-42">タイトル</h1>
         </div>
         <p class="p-subtitle">サブタイトル</p>
-    </section>
+    </section> -->
 
     <!-- 明らかに使いまわせる要素などはコンポーネント扱い「c-xxx」と命名します -->
-    <button class="c-button">ボタン</button>
-    <a href="#" class="c-link">リンク</a>
+    <!-- <button class="c-button">ボタン</button>
+    <a href="#" class="c-link">リンク</a> -->
 
+    <!-- ヘッダー -->
 
+    <header class="l-header">
+        <!-- ロゴ -->
+        <img src="img/headerLogo.png" alt="halu.logo" class="p-headerlogo">
 
-    
+        <!-- アイコン -->
+         <div class="headerIcon">
+            <img src="img/headerIcon_Insta.png" alt="instagram" class="p-headerlcon">
+            <img src="img/headerIcon_minne.png" alt="minnne" class="p-headerlcon">
+         </div>
+    </header>
+
+    <!-- メインイメージ -->
+     <div class="mainWrapper">
+        <img src="img/mainImage.png" alt="main_image" class="mainImage">
+     </div>
+
+    <!-- ミドルコンテンツ -->
+     <div class="middleWrapper">
+
+     </div>
+
+    <!-- フッター -->
+     <footer>
+
+     </footer>
 
 </body>
 </html>
