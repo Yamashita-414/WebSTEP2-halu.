@@ -5,8 +5,17 @@
 例: .l-header, .l-footer, .l-main, .l-sidebar
 */
 
-.l-header {
 
+.l-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #F0FFF480;
+
+    &__logo{
+        position: center;
+    }
 }
 
 .l-main {
