@@ -36,3 +36,19 @@
 
     }
 }
+
+
+.p-header{
+
+    &__logo{
+        margin: auto; /* 水平方向の中央揃え */
+    }
+
+    &__headerIcom{
+        display: flex;
+        
+        &__image{
+
+        }
+    }
+}

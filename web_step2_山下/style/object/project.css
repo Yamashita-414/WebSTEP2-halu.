@@ -4,4 +4,10 @@
 役割: 基本こればっか使います。特定のページやセクションに固有の単位を意味します、
 命名: クラス名頭に「p-」を付ける。 
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
-*//*# sourceMappingURL=project.css.map */
+*/
+.p-header__logo {
+  margin: auto; /* 水平方向の中央揃え */
+}
+.p-header__headerIcom {
+  display: flex;
+}/*# sourceMappingURL=project.css.map */

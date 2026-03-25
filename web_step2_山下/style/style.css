@@ -76,6 +76,12 @@ table {
 命名: クラス名頭に「p-」を付ける。 
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
 */
+.p-header__logo {
+  margin: auto; /* 水平方向の中央揃え */
+}
+.p-header__headerIcom {
+  display: flex;
+}
 /* 
 【Utility】
 役割: 単一の役割を持つ汎用性の高いスタイルを定義して、HTML側で使い回します。
