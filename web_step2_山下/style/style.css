@@ -58,10 +58,10 @@ table {
 */
 .l-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
   background-color: rgba(240, 255, 244, 0.5019607843);
+  height: 116px;
 }
 
 /* 
@@ -76,12 +76,16 @@ table {
 命名: クラス名頭に「p-」を付ける。 
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
 */
-.p-header__logo {
-  margin: auto; /* 水平方向の中央揃え */
+.p-header__dummy {
+  flex: 1;
 }
-.p-header__headerIcom {
+.p-header .p-icon {
+  flex: 1;
   display: flex;
+  gap: 17px;
+  justify-content: flex-end;
 }
+
 /* 
 【Utility】
 役割: 単一の役割を持つ汎用性の高いスタイルを定義して、HTML側で使い回します。

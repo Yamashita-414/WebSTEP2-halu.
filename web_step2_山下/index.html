@@ -38,31 +38,32 @@
     <a href="#" class="c-link">リンク</a> -->
 
     <!-- ヘッダー -->
-    <header class="l-header">
+    <header class="l-header p-header">
+        <div class="p-header__dummy"></div>
         <!-- ロゴ -->
         <img src="img/headerLogo.png" alt="haluのlogo" class="p-header__logo">
 
         <!-- アイコン -->
-         <div class="p-header__icon">
+         <div class="p-icon">
             <img src="img/headerIcon_Insta.png" alt="instagram" class="p-icon__image">
             <img src="img/headerIcon_minne.png" alt="minnne" class="p-icon__image">
          </div>
     </header>
 
     <!-- キービジュアル -->
-     <section class="l-kv">
+     <section class="l-kv p-kv">
         <!-- タイトル -->
         <h1 class="p-kv__title">halu.</h1>
      </section>
     
     <!-- プロフィール -->
-    <div class="l-profile">
+    <div class="l-profile p-profile">
         <!-- メイン画像 -->
-        <img src="img/mainImage.png" alt="main_image" class="p-profile__Image">
+        <img src="img/mainImage.png" alt="main_image" class="p-profile__image">
         <!-- スローガン -->
         <h2 class="p-profile__mainCopy">春のようにぽかぽかとしたぬくもりを感じ心が晴れ渡りますように</h2>
 
-        <div class="p-profile__sentence">
+        <div class="p-profile__text">
             <p>こんにちは。手編み雑貨のお店 ”h a l u.” です。</p>
             <p>ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
             <p>ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
@@ -71,51 +72,60 @@
     </div>
 
     <!-- コンテンツ -->
-     <div class="l-contents">
+     <div class="l-contents p-contents">
         <!-- タイトル -->
         <img src="img/middleTitle.png" alt="gallery" class="p-contents__gallery">
         <!-- コンテンツ -->
-         <div class="p-contents__product">
+         <div class="p-product">
             <!-- Imageと説明文を適切な要素で囲む -->
-             
-            <img src="img/middleItem1.png" alt="ポーチの写真(緑)" class="p-product__item">
-            <p class="p-item__explain"></p>
+            <div class="p-product__unit">
+                <img src="img/middleItem1.png" alt="ポーチの写真(緑)" class="p-product__item">
+                <p class="p-product__explain"></p>
+            </div>
 
-            <img src="img/middleItem2.png" alt="ポーチの写真(白)" class="p-product__item">
-            <p class="p-item__explain"></p>
+            <div class="p-product__unit">
+                <img src="img/middleItem2.png" alt="ポーチの写真(白)" class="p-product__item">
+                <p class="p-product__explain"></p>
+            </div>
 
-            <img src="img/middleItem3.png" alt="巾着の写真" class="p-product__item">
-            <p class="p-item__explain"></p>
+            <div class="p-product__unit">
+                <img src="img/middleItem3.png" alt="巾着の写真" class="p-product__item">
+                <p class="p-product__explain"></p>
+            </div>
 
-            <img src="img/middleItem4.png" alt="スマホチェーンの写真" class="p-product__item">
-            <p class="p-item__explain"></p>
+            <div class="p-product__unit">
+                <img src="img/middleItem4.png" alt="スマホチェーンの写真" class="p-product__item">
+                <p class="p-product__explain"></p>
+            </div>
 
-            <img src="img/middleItem5.png" alt="ラッピングの写真" class="p-product__item">
-            <p class="p-item__explain"></p>
-
+            <div class="p-product__unit">
+                <img src="img/middleItem5.png" alt="ラッピングの写真" class="p-product__item">
+                <p class="p-product__explain"></p>
+            </div>
          </div>
+
         <!-- 画像１ -->
-         <div class="p-contents__explain">
+         <div class="p-explain">
             <img src="img/middleImage1.png" alt="middle_image1" class="p-explain__imageGirl">
             <img src="img/middleLogo1.png" alt="かごをもった女の子の写真" class="p-explain__logoGirl">
-            <p class="p-middleStyleGirl__middleTextAreaGirl">==============================================================================================================================</p>
+            <p class="p-explain__text">==============================================================================================================================</p>
          </div>
         <!-- 画像２ -->
-         <div class="p-contents__blandLogo">
-            <img src="img/middleImage2.png" alt="middle_image2" class="p-blandLogo__imageGirl">
-            <img src="img/middleLogo2.png" alt="毛糸が詰まったかごの写真" class="p-blandLogo__imageBag">
-            <p class="p-blandLogo__TextArea">==============================================================================================================================</p>
+         <div class="p-brandLogo">
+            <img src="img/middleImage2.png" alt="middle_image2" class="p-brandLogo__imageGirl">
+            <img src="img/middleLogo2.png" alt="毛糸が詰まったかごの写真" class="p-brandLogo__imageBag">
+            <p class="p-brandLogo__text">==============================================================================================================================</p>
         </div>
 
     <!-- フッター -->
-     <footer>
+     <footer class="l-footer p-footer">
         <!-- タイトル -->
-        <img src="img/footerTitle.png" alt="footer_title" class="l-footerTitle">
+        <img src="img/footerTitle.png" alt="コンタクト" class="p-footer__title">
         <!-- アイコン -->
-         <div class="footerIcons">
-            <img src="img/footerIcon_insta.png" alt="instagram" class="p-footerIcons__footerlcon">
-            <img src="img/footerIcon_bace.png" alt="bace" class="p-footerIcons__footerlcon">
-            <img src="img/footerIcon_minne.png" alt="minnne" class="p-footerIcons__footerlcon">
+         <div class="p-footerIcons">
+            <img src="img/footerIcon_insta.png" alt="instagram" class="p-footerIcons__icon">
+            <img src="img/footerIcon_bace.png" alt="bace" class="p-footerIcons__icon">
+            <img src="img/footerIcon_minne.png" alt="minnne" class="p-footerIcons__icon">
          </div>
      </footer>
 

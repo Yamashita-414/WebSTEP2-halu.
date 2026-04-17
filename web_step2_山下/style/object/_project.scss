@@ -39,16 +39,19 @@
 
 
 .p-header{
+    &__dummy{
+        flex:1;
+    }
 
     &__logo{
-        margin: auto; /* 水平方向の中央揃え */
+
     }
 
-    &__headerIcom{
-        display: flex;
-        
-        &__image{
+    .p-icon {
+    flex: 1;
+    display: flex;
+    gap: 17px;
+    justify-content: flex-end;
+}
 
-        }
-    }
 }
