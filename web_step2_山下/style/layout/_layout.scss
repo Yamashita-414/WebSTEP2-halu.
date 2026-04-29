@@ -15,8 +15,10 @@
 
 }
 
-.l-main {
-
+.l-profile {
+    display: flex;
+    flex-direction: column; // 縦並びにする
+    align-items: center;
 }
 
 .l-footer {

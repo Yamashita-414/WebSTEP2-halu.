@@ -20,7 +20,7 @@
     }
 
     &__logo{
-
+        transform: translateY(11px)
     }
 
     .p-icon {
@@ -35,8 +35,8 @@
     width: 100%;
     height: 100vh; // 画面いっぱいの高さ
     background-image: url("../img/backgroundImage1.png");
+    background-color: #D2DCD2;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: contain; // これで画像が1枚ピッタリ収まる
     // ★ここを追加：Flexboxで子要素を真ん中に寄せる
     display: flex;           // フレックスボックスにする
@@ -52,5 +52,23 @@
         margin-right: -10px;
         transform: translateX(5px);
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.p-profile{
+    height: 1130px;
+    background-color: #D2DCD2;
+    
+
+    &__image{
+        
+    }
+
+    &__mainCopy{
+        color: #786556;
+    }
+
+    &__text{
+        color: #786556;
     }
 }
