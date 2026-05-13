@@ -20,7 +20,7 @@
     }
 
     &__logo{
-        transform: translateY(11px)
+        transform: translateY(11px);
     }
 
     .p-icon {
@@ -56,19 +56,78 @@
 }
 
 .p-profile{
-    height: 1130px;
+    // height: 1130px;
+    padding-bottom:260px;
     background-color: #D2DCD2;
     
 
     &__image{
-        
+        transform: translateY(35px);
     }
 
     &__mainCopy{
         color: #786556;
+        font-size: 30px;
+        transform: translateY(85px); //35+50
+
     }
 
     &__text{
-        color: #786556;
+        color: #786556; 
+        font-size: 24px;
+        transform: translateY(155px); //35+50+70
+    }
+}
+
+.p-contents{
+    background-image: url("../img/middleBackgroundimage.png");
+    padding-top: 260px;
+    transform: translateY(-200px);
+    display: flex;
+    flex-direction: column; // 1. 中身を「縦並び」にする
+    align-items: center;    // 2. ★縦並びの時の「横方向の中央揃え」
+
+    &__title{
+        padding-bottom: 50px;
+    }
+
+    .p-product{
+        display: flex;
+        gap: 95px;
+
+        &__unit{
+            flex-shrink: 0; // ★「何があっても絶対に縮むな」という命令
+            width: 400px;   // Figmaで決めた画像の横幅を指定しておく
+        }
+
+        &__item{
+            padding-bottom: 50px;
+        }
+    }
+
+    .p-explain{
+        padding-top: 170px;
+
+        &__imageGirl{
+            z-index: ;
+        }
+
+        &__logo{
+            z-index: ;
+        }
+
+
+    }
+
+    .p-brandLogo{
+        padding-top: 170px;
+
+        &__imageBag{
+        }
+
+        &__logo{
+        }
+
+
     }
 }

@@ -124,16 +124,51 @@ table {
 }
 
 .p-profile {
-  height: 1130px;
+  padding-bottom: 260px;
   background-color: #D2DCD2;
+}
+.p-profile__image {
+  transform: translateY(35px);
 }
 .p-profile__mainCopy {
   color: #786556;
+  font-size: 30px;
+  transform: translateY(85px);
 }
 .p-profile__text {
   color: #786556;
+  font-size: 24px;
+  transform: translateY(155px);
 }
 
+.p-contents {
+  background-image: url("../img/middleBackgroundimage.png");
+  padding-top: 260px;
+  transform: translateY(-200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-contents__title {
+  padding-bottom: 50px;
+}
+.p-contents .p-product {
+  display: flex;
+  gap: 95px;
+}
+.p-contents .p-product__unit {
+  flex-shrink: 0;
+  width: 400px;
+}
+.p-contents .p-product__item {
+  padding-bottom: 50px;
+}
+.p-contents .p-explain {
+  padding-top: 170px;
+}
+.p-contents .p-brandLogo {
+  padding-top: 170px;
+}
 /* 
 【Utility】
 役割: 単一の役割を持つ汎用性の高いスタイルを定義して、HTML側で使い回します。
