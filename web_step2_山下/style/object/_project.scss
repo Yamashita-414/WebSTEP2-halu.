@@ -94,7 +94,8 @@ $z-map:(
     background-color: #DDCCC5;
 
     &__title{
-        padding-bottom: 50px;
+        color: #A9B0A8;
+        font-size: 128px;
     }
 
     .p-product{
@@ -129,7 +130,7 @@ $z-map:(
             z-index: 20;
             position: absolute; 
             margin-top: 50px;
-
+            margin-left: -50px;
         }
 
         &__text{

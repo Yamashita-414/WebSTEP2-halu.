@@ -161,7 +161,8 @@ table {
   background-color: #DDCCC5;
 }
 .p-contents__title {
-  padding-bottom: 50px;
+  color: #A9B0A8;
+  font-size: 128px;
 }
 .p-contents .p-product {
   display: flex;
@@ -191,6 +192,7 @@ table {
   z-index: 20;
   position: absolute;
   margin-top: 50px;
+  margin-left: -50px;
 }
 .p-contents .p-explain__text {
   color: #786556;
