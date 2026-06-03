@@ -5,7 +5,11 @@
 例: .p-top-area, .p-top-area__title, .p-about-section, .p-about-section__heading, .p-contact-form
 */
 
-
+$z-map:(
+    imageGirl:5,
+    imageBag:6,
+    logo:7,
+);
 
 
 .p-header{
@@ -81,11 +85,13 @@
 
 .p-contents{
     background-image: url("../img/middleBackgroundimage.png");
+    z-index: 40;
     padding-top: 260px;
     transform: translateY(-200px);
     display: flex;
     flex-direction: column; // 1. 中身を「縦並び」にする
     align-items: center;    // 2. ★縦並びの時の「横方向の中央揃え」
+    background-color: #DDCCC5;
 
     &__title{
         padding-bottom: 50px;
@@ -107,13 +113,31 @@
 
     .p-explain{
         padding-top: 170px;
+        display: flex;
+        position: relative;
 
         &__imageGirl{
-            z-index: ;
+            z-index: 10;
         }
 
-        &__logo{
-            z-index: ;
+        &__title{
+            background-color: #DDCCC5;
+            color: #fff;
+            padding: 33px 0;
+            width: 450px;
+            text-align: center;
+            z-index: 20;
+            position: absolute; 
+            margin-top: 50px;
+
+        }
+
+        &__text{
+            color:#786556;
+            width: 400px;
+            height: 400px;
+            padding: 200px 0 0 50px;
+            word-break: break-all; // ★記号や長い文字列を枠内で確実に折り返すためのお守り
         }
 
 
@@ -121,13 +145,62 @@
 
     .p-brandLogo{
         padding-top: 170px;
+        display: flex;
+        position: relative;
+
+        &__title{
+            background-color: #D4DBD2;
+            color: #fff;
+            padding: 33px 0;
+            width: 450px;
+            text-align: center;
+            z-index: 20;
+            position: absolute;
+            margin-top: 50px;
+        }
+
+        &__text{
+            color:#786556;
+            width: 400px;
+            height: 400px;
+            padding: 200px 50px 0 0;
+            word-break: break-all; // ★記号や長い文字列を枠内で確実に折り返すためのお守り
+        }
 
         &__imageBag{
+            z-index: 10;
+        }
+        
+
+
+    }
+}
+
+.p-footer{
+
+    &__title{
+        color:#FAF0E6;
+        font-size:128px ;
+        text-align: center;
+    }
+
+    .p-footerIcons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        margin-top: 15px;
+
+
+
+        &__icon{
+            width: 100px;
+            height: auto;
         }
 
-        &__logo{
+        &__name{
+            color: #786556;
+            font-size: 36px;
         }
-
-
     }
 }
