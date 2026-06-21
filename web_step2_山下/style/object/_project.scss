@@ -38,10 +38,10 @@ $z-map:(
 .p-kv{
     width: 100%;
     height: 100vh; // 画面いっぱいの高さ
-    background-image: url("../img/backgroundImage1.png");
+    background-image: url("../img/backgroundImage1.jpeg");
     background-color: #D2DCD2;
     background-repeat: no-repeat;
-    background-size: contain; // これで画像が1枚ピッタリ収まる
+    background-size: cover; // 横幅いっぱいに表示する
     // ★ここを追加：Flexboxで子要素を真ん中に寄せる
     display: flex;           // フレックスボックスにする
     justify-content: center; // 横方向の真ん中
@@ -52,9 +52,8 @@ $z-map:(
         font-size: 120px;
         text-align: center;
         letter-spacing: 10px;
-        // 最後の文字の右側の余白をキャンセルして、右に10px寄せる
-        margin-right: -10px;
-        transform: translateX(5px);
+        margin-right: -40px;
+        // transform: translateX(5px);
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     }
 }
@@ -63,36 +62,43 @@ $z-map:(
     // height: 1130px;
     padding-bottom:260px;
     background-color: #D2DCD2;
+
+    &__treat{
+        margin-top: -116px;
+        z-index: 10;
+    }
     
 
     &__image{
-        transform: translateY(35px);
+
     }
 
     &__mainCopy{
         color: #786556;
         font-size: 30px;
-        transform: translateY(85px); //35+50
+        margin-top: 25 px;
 
     }
 
     &__text{
         color: #786556; 
         font-size: 24px;
-        transform: translateY(155px); //35+50+70
+        margin-top: 50px;
     }
 }
 
 .p-contents{
-    background-image: url("../img/middleBackgroundimage.png");
+    background-color: #FAF0E6;
     z-index: 40;
-    padding-top: 260px;
-    transform: translateY(-200px);
     display: flex;
     flex-direction: column; // 1. 中身を「縦並び」にする
     align-items: center;    // 2. ★縦並びの時の「横方向の中央揃え」
-    background-color: #DDCCC5;
 
+    &__treat{
+        margin-top: -142px;
+        z-index: 10;
+    }
+    
     &__title{
         color: #A9B0A8;
         font-size: 128px;
@@ -101,6 +107,9 @@ $z-map:(
     .p-product{
         display: flex;
         gap: 95px;
+        width: 100%;
+        overflow-x: auto;
+        padding:0 40px;
 
         &__unit{
             flex-shrink: 0; // ★「何があっても絶対に縮むな」という命令
@@ -170,6 +179,11 @@ $z-map:(
 
         &__imageBag{
             z-index: 10;
+            margin-bottom: 80px;
+        }
+
+        &__treat{
+
         }
         
 

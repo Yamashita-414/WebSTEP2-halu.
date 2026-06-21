@@ -5,6 +5,9 @@
 例: .l-header, .l-footer, .l-main, .l-sidebar
 */
 
+body{
+    overflow-x: hidden; //X軸のスクロールを許可しない
+}
 
 .l-header {
     display: flex;
