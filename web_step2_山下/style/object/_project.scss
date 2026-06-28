@@ -94,7 +94,7 @@ $z-map:(
     flex-direction: column; // 1. 中身を「縦並び」にする
     align-items: center;    // 2. ★縦並びの時の「横方向の中央揃え」
 
-    &__treat{
+    &__treatTop{
         margin-top: -142px;
         z-index: 10;
     }
@@ -150,7 +150,6 @@ $z-map:(
             word-break: break-all; // ★記号や長い文字列を枠内で確実に折り返すためのお守り
         }
 
-
     }
 
     .p-brandLogo{
@@ -180,18 +179,17 @@ $z-map:(
         &__imageBag{
             z-index: 10;
             margin-bottom: 80px;
-        }
-
-        &__treat{
-
-        }
-        
-
+        }        
 
     }
 }
 
 .p-footer{
+
+    &__treat{
+        z-index: 10;
+        margin-top: -180px;
+    }
 
     &__title{
         color:#FAF0E6;
