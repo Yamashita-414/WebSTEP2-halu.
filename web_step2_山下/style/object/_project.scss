@@ -64,25 +64,31 @@ $z-map:(
     background-color: #D2DCD2;
 
     &__treat{
-        margin-top: -116px;
+        margin-top: -158px;
         z-index: 10;
     }
     
 
     &__image{
+        margin-top: -140px;
+        z-index: 15;
+    }
 
+    &__mainCopyBlock{
+        margin-top: 40px;
+        text-align: center;
+        letter-spacing: 8px;
     }
 
     &__mainCopy{
         color: #786556;
-        font-size: 30px;
-        margin-top: 25 px;
-
+        font-size: 40px;
     }
 
     &__text{
         color: #786556; 
-        font-size: 24px;
+        text-align: center;
+        font-size: 30px;
         margin-top: 50px;
     }
 }
@@ -95,7 +101,7 @@ $z-map:(
     align-items: center;    // 2. ★縦並びの時の「横方向の中央揃え」
 
     &__treatTop{
-        margin-top: -142px;
+        margin-top: -198px;
         z-index: 10;
     }
     
@@ -198,22 +204,30 @@ $z-map:(
     }
 
     .p-footerIcons{
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: center;
+
+        &__item{
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 35px;
         margin-top: 15px;
 
+            .p-footerIcons__icon{
+                width: 100px;
+                height: auto;
+            }
 
-
-        &__icon{
-            width: 100px;
-            height: auto;
-        }
-
-        &__name{
-            color: #786556;
-            font-size: 36px;
-        }
+            .p-footerIcons__name{
+                color: #786556;
+                font-size: 36px;
+            }
+        }   
     }
+    
 }

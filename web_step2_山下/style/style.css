@@ -76,9 +76,8 @@ body {
 
 .l-footer {
   background-color: #DDCCC5;
-  padding-top: 80px;
+  padding-bottom: 80px;
   width: 100%;
-  height: 630px;
   z-index: 50;
 }
 
@@ -139,17 +138,26 @@ body {
   background-color: #D2DCD2;
 }
 .p-profile__treat {
-  margin-top: -116px;
+  margin-top: -158px;
   z-index: 10;
+}
+.p-profile__image {
+  margin-top: -140px;
+  z-index: 15;
+}
+.p-profile__mainCopyBlock {
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: 8px;
 }
 .p-profile__mainCopy {
   color: #786556;
-  font-size: 30px;
-  margin-top: 25 px;
+  font-size: 40px;
 }
 .p-profile__text {
   color: #786556;
-  font-size: 24px;
+  text-align: center;
+  font-size: 30px;
   margin-top: 50px;
 }
 
@@ -161,7 +169,7 @@ body {
   align-items: center;
 }
 .p-contents__treatTop {
-  margin-top: -142px;
+  margin-top: -198px;
   z-index: 10;
 }
 .p-contents__title {
@@ -246,16 +254,23 @@ body {
 }
 .p-footer .p-footerIcons {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+}
+.p-footer .p-footerIcons__item {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 35px;
   margin-top: 15px;
 }
-.p-footer .p-footerIcons__icon {
+.p-footer .p-footerIcons__item .p-footerIcons__icon {
   width: 100px;
   height: auto;
 }
-.p-footer .p-footerIcons__name {
+.p-footer .p-footerIcons__item .p-footerIcons__name {
   color: #786556;
   font-size: 36px;
 }
