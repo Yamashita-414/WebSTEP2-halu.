@@ -6,7 +6,21 @@
 */
 
 // 実用例
-.c-button {
+.c-snsLink {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    gap: 15px;             // アイコンと文字の間隔
+    text-decoration: none; // リンクの下線を消す
 
-    
+    &__icon {
+        width: 100px;      // アイコンのサイズ
+        height: auto;
+    }
+
+    &__text {
+        color: #786556;    // 文字色
+        font-size: 36px;   // 文字サイズ
+        font-weight: bold; // 太字
+    }
 }

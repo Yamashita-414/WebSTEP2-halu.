@@ -13,13 +13,9 @@ $z-map:(
 
 
 .p-header{
-    position: absolute; // 1. ヘッダーを浮かせる
-    top: 0;
-    left: 0;
-    width: 100%;
     z-index: 10;         // 2. KVより上にくるように数字を大きくする
 
-    &__dummy{
+    &__spacer{
         flex:1;
     }
 
@@ -36,16 +32,6 @@ $z-map:(
 }
 
 .p-kv{
-    width: 100%;
-    height: 100vh; // 画面いっぱいの高さ
-    background-image: url("../img/backgroundImage1.jpeg");
-    background-color: #D2DCD2;
-    background-repeat: no-repeat;
-    background-size: cover; // 横幅いっぱいに表示する
-    // ★ここを追加：Flexboxで子要素を真ん中に寄せる
-    display: flex;           // フレックスボックスにする
-    justify-content: center; // 横方向の真ん中
-    align-items: center;     // 縦方向（高さ）の真ん中
 
     &__title{
         color: rgb(244, 255, 253);
@@ -59,9 +45,6 @@ $z-map:(
 }
 
 .p-profile{
-    // height: 1130px;
-    padding-bottom:260px;
-    background-color: #D2DCD2;
 
     &__treat{
         margin-top: -158px;
@@ -94,11 +77,7 @@ $z-map:(
 }
 
 .p-contents{
-    background-color: #FAF0E6;
     z-index: 40;
-    display: flex;
-    flex-direction: column; // 1. 中身を「縦並び」にする
-    align-items: center;    // 2. ★縦並びの時の「横方向の中央揃え」
 
     &__treatTop{
         margin-top: -198px;
@@ -132,7 +111,7 @@ $z-map:(
         display: flex;
         position: relative;
 
-        &__imageGirl{
+        &__image{
             z-index: 10;
         }
 
@@ -182,7 +161,7 @@ $z-map:(
             word-break: break-all; // ★記号や長い文字列を枠内で確実に折り返すためのお守り
         }
 
-        &__imageBag{
+        &__image{
             z-index: 10;
             margin-bottom: 80px;
         }        
@@ -203,31 +182,12 @@ $z-map:(
         text-align: center;
     }
 
-    .p-footerIcons{
-        
+    &__snsList{
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        align-content: center;
-
-        &__item{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 35px;
-        margin-top: 15px;
-
-            .p-footerIcons__icon{
-                width: 100px;
-                height: auto;
-            }
-
-            .p-footerIcons__name{
-                color: #786556;
-                font-size: 36px;
-            }
-        }   
+        flex-direction: column; // ★縦並びにする
+        align-items: center;     // ★中央寄せにする（もし左揃えで中央に置きたい場合は調整可能）
+        gap: 25px;               // ★SNSグループ同士の上下の隙間
+        margin-top: 30px;
     }
     
 }
