@@ -108,22 +108,87 @@ $z-map:(
     &__title{
         color: #A9B0A8;
         font-size: 128px;
+        padding-bottom:60px;
     }
 
     .p-product{
-        display: flex;
-        gap: 95px;
+        position: relative; // ボタンの基準位置（親要素）にする
         width: 100%;
-        overflow-x: auto;
-        padding:0 40px;
+
+        //スクロール部分について
+        &__track{
+            display: flex;
+            gap: 95px;
+            width: 100%;
+            overflow-x: auto;
+            padding: 0 calc(50vw - 200px); // ★両端に画面幅半分の余白を作って、端の商品も中央に来れるようにする(あんまりよくわかってない)
+
+            // ◎スクロールしたときに商品がピッタリ中央に止まる設定
+            scroll-snap-type: x mandatory;
+
+            // スクロールバーを非表示にしたい場合（ここGeminiの言いなり、よくわかってない）
+            scrollbar-width: none; // Firefox
+            &::-webkit-scrollbar {
+            display: none; // Chrome, Safari
+            }
+        }
 
         &__unit{
             flex-shrink: 0; // ★「何があっても絶対に縮むな」という命令
             width: 400px;   // Figmaで決めた画像の横幅を指定しておく
+            scroll-snap-align: center; // ◎スクロール時にこの要素を画面中央にスナップさせる
+
+            // 1. 通常状態（両脇の商品）：ぼかしをかける
+            opacity: 0.4;                     // 透明度を下げて白っぽく見せる
+            filter: blur(4px);               // ガウスをかける
+            transform: scale(0.9);           // 少し小さくする
+            transition: opacity 0.4s, filter 0.4s, transform 0.4s; // 切り替えを滑らかに
+
+            // 2. アクティブ状態（真ん中の商品）：くっきり表示
+            &.is-active {
+                opacity: 1;                   // 100%表示
+                filter: blur(0);              // ぼかし解除
+                transform: scale(1);          // 本来のサイズ（100%）
+            }
         }
 
         &__item{
             padding-bottom: 50px;
+        }
+
+        // ボタンの共通スタイル
+        &__button {
+            // 1. デフォルトのブラウザスタイルをリセット
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 0;
+
+            // 2. ボタンの位置を調整する
+            position: absolute;
+            inset-block: 0; // 「top: 0; bottom: 0;」の略、上下の位置を0にする
+            margin: auto 0; // 上下中央寄せ
+            height: 10px; // ボタンの高さを指定する
+            z-index: 20;
+
+            //仮
+            padding: 10px 16px;
+            color: #405c49;
+            font-weight: bold;
+            font-size: 36px;
+            cursor: pointer;
+
+            // ★左右の位置指定を追加！
+            &--prev {
+                left: calc(50% - 250px); // 中央（50%）から左へ 250px
+                transform: translateX(-50%); // ボタン自体の中心位置をピッタリ揃える
+            }
+
+            &--next {
+                left: calc(50% + 250px); // 中央（50%）から右へ 250px
+                transform: translateX(-50%); // ボタン自体の中心位置をピッタリ揃える
+            }            
         }
     }
 

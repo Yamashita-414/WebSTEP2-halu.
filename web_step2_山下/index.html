@@ -100,44 +100,60 @@
 
             <!-- タイトル -->
             <h2 class="p-contents__title">gallery</h2> 
-            <!-- コンテンツ -->
+
+            <!-- 商品スライダー -->
             <div class="p-product">
-                <!-- Imageと説明文を適切な要素で囲む -->
-                <div class="p-product__unit">
-                    <img src="img/middleItem1.png" alt="ポーチの写真(緑)" class="p-product__item">
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+
+                <div class="p-product__track">
+                    <!-- 1セット目 -->
+                    <div class="p-product__unit">
+                        <img src="img/middleItem1.png" alt="ポーチの写真(緑)" class="p-product__item">
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーー一一</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                    </div>
+
+                    <!-- 2セット目 -->
+                    <div class="p-product__unit">
+                        <img src="img/middleItem2.png" alt="ポーチの写真(白)" class="p-product__item">
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                    </div>
+
+                    <!-- 3セット目 -->
+                    <div class="p-product__unit is-active">
+                        <img src="img/middleItem3.png" alt="巾着の写真" class="p-product__item">
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                    </div>
+
+                    <!-- 4セット目 -->
+                    <div class="p-product__unit">
+                        <img src="img/middleItem4.png" alt="スマホチェーンの写真" class="p-product__item">
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                    </div>
+
+                    <!-- 5セット目 -->
+                    <div class="p-product__unit">
+                        <img src="img/middleItem5.png" alt="ラッピングの写真" class="p-product__item">
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                        <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
+                    </div>
+                </div>
+                
+                <!-- ★左右の矢印ボタン -->
+                <div class="p-product__buttons">
+                    <button type="button" class="p-product__button p-product__button--prev" aria-label="前の商品へ">◀</button>
+                    <button type="button" class="p-product__button p-product__button--next" aria-label="次の商品へ">▶</button>
                 </div>
 
-                <div class="p-product__unit">
-                    <img src="img/middleItem2.png" alt="ポーチの写真(白)" class="p-product__item">
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                </div>
-
-                <div class="p-product__unit">
-                    <img src="img/middleItem3.png" alt="巾着の写真" class="p-product__item">
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                </div>
-
-                <div class="p-product__unit">
-                    <img src="img/middleItem4.png" alt="スマホチェーンの写真" class="p-product__item">
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                </div>
-
-                <div class="p-product__unit">
-                    <img src="img/middleItem5.png" alt="ラッピングの写真" class="p-product__item">
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                    <p class="p-product__explain">ーーーーーーーーーーー紹介文ーーーーーーーーー</p>
-                </div>
             </div>
+
 
             <!-- 画像１ -->
             <div class="p-explain">
