@@ -26,3 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. コンソールに出力して確認！
     // console.log(images);
     // });
+
+window.addEventListener('DOMContentLoaded', () => {
+    // アクティブな商品（3枚目）を取得
+    const activeUnit = document.querySelector('.p-product__unit.is-active');
+
+    if (activeUnit) {
+        // 3枚目の要素が真ん中に来るように一瞬でスクロールさせる
+        activeUnit.scrollIntoView({
+            behavior: 'instant', // ページ読み込み時に一瞬で真ん中に配置（パッと切り替わる）
+            inline: 'center',    // 横方向の中央に合わせる
+            block: 'nearest'     // 縦方向の余計なスクロールを防ぐ
+        });
+    }
+
+    // console.log(activeUnit);
+});
+
+
