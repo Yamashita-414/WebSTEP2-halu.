@@ -21,26 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // showNextImage();
     setInterval(showNextImage, 4000);
 
+    console.log('aiueo');
+
+    //横スクロールする親トラックを取得
+    const track = document.querySelector('.p-product__track');
+
+    // アクティブな商品（3枚目）を取得
+    const activeUnit = document.querySelector('.p-product__unit.is-active');
+
+    if (track && activeUnit) {
+        // （offsetLeft(3枚目要素の左端の位置)）- (トラック幅/2) + (要素幅/2) を計算して中央位置を決定
+        const scrollPosition = activeUnit.offsetLeft - (track.clientWidth / 2) + (activeUnit.clientWidth / 2);
+        
+        // ページ全体のスクロールは動かさず、トラックの横スクロール位置だけをセット
+        track.scrollLeft = scrollPosition;
+    }
+
+    // console.log(activeUnit);
+
 });
 
     // 2. コンソールに出力して確認！
     // console.log(images);
     // });
 
-window.addEventListener('DOMContentLoaded', () => {
-    // アクティブな商品（3枚目）を取得
-    const activeUnit = document.querySelector('.p-product__unit.is-active');
-
-    if (activeUnit) {
-        // 3枚目の要素が真ん中に来るように一瞬でスクロールさせる
-        activeUnit.scrollIntoView({
-            behavior: 'instant', // ページ読み込み時に一瞬で真ん中に配置（パッと切り替わる）
-            inline: 'center',    // 横方向の中央に合わせる
-            block: 'nearest'     // 縦方向の余計なスクロールを防ぐ
-        });
-    }
-
-    // console.log(activeUnit);
-});
 
 
