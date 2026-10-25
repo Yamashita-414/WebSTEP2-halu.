@@ -39,6 +39,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // console.log(activeUnit);
 
+    //以下自動スライド
+    const units = document.querySelectorAll('.p-product__unit');
+    
+    if (!track || units.length === 0) return;
+
+    // 現在アクティブなユニットのインデックス（デフォルトは3番目なので index 2）
+    let productCurrentIndex = 2; 
+
+    // --- 1. 指定したインデックスへスライド・クラス付け替えを行う関数 ---
+    function moveToSlide(index) {
+        // 全てのユニットから is-active を外す
+        units.forEach(unit => {
+            unit.classList.remove('is-active');
+        });
+
+        // 該当のユニットに is-active を付与（これでCSSによりぼかしが解除＆拡大される）
+        const targetUnit = units[index];
+        targetUnit.classList.add('is-active');
+
+        // トラック内での横スクロール位置を計算して中央にスライドさせる
+        const scrollPosition = targetUnit.offsetLeft - (track.clientWidth / 2) + (targetUnit.clientWidth / 2);
+        
+        track.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth' // スムーズにループ・移動させる
+        });
+    }
+
+    // --- 2. 初期表示（3番目を中央にセット。初回はアニメーションなしで即座に配置） ---
+    // ※初回だけパッと表示したい場合は scrollLeft を直接使うか、瞬時に移動させます
+    const initialUnit = units[productCurrentIndex];
+    const initialPos = initialUnit.offsetLeft - (track.clientWidth / 2) + (initialUnit.clientWidth / 2);
+    track.scrollLeft = initialPos;
+
+
+    // --- 3. 次のインデックスに進める関数（無限ループ対応） ---
+    function nextSlide() {
+        productCurrentIndex++;
+
+        // 最後のユニット（5番目：index 4）を超えたら、最初のユニット（index 0）に戻す
+        if (productCurrentIndex >= units.length) {
+            productCurrentIndex = 0;
+        }
+
+        moveToSlide(productCurrentIndex);
+    }
+
+
+    // --- 4. 5秒間隔（5000ミリ秒）で自動スライドを実行 ---
+    let slideInterval = setInterval(nextSlide, 5000);
+
 });
 
     // 2. コンソールに出力して確認！
