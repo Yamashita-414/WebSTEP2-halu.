@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // showNextImage();
     setInterval(showNextImage, 4000);
 
-    console.log('aiueo');
+    //console.log('aiueo');
 
     //横スクロールする親トラックを取得
     const track = document.querySelector('.p-product__track');
@@ -39,13 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // console.log(activeUnit);
 
-    //以下自動スライド
+    //✯✯以下商品ユニット用✯✯
     const units = document.querySelectorAll('.p-product__unit');
     
     if (!track || units.length === 0) return;
 
     // 現在アクティブなユニットのインデックス（デフォルトは3番目なので index 2）
-    let productCurrentIndex = 2; 
+    let productCurrentIndex = [...units].findIndex(
+        unit => unit.classList.contains('is-active')
+    );
 
     // --- 1. 指定したインデックスへスライド・クラス付け替えを行う関数 ---
     function moveToSlide(index) {
@@ -88,8 +90,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- 4. 5秒間隔（5000ミリ秒）で自動スライドを実行 ---
-    let slideInterval = setInterval(nextSlide, 5000);
+    const slideInterval = setInterval(nextSlide, 5000);
 
+    // --- 5. クリックイベント
+    // --- 左右のボタン要素を取得する ---
+    const prevButton = document.querySelector('.p-product__button--prev');
+    const nextButton = document.querySelector('.p-product__button--next');
+
+    // ★ テスト用：左ボタンがクリックされたか確認
+/*     if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            console.log('✅ 左ボタン（prev）がクリックされました！');
+        });
+    } else {
+        console.log('❌ 左ボタンの要素が見つかりませんでした。クラス名を確認してね。');
+    }
+
+    // ★ テスト用：右ボタンがクリックされたか確認
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            console.log('✅ 右ボタン（next）がクリックされました！');
+        });
+    } else {
+        console.log('❌ 右ボタンの要素が見つかりませんでした。クラス名を確認してね。');
+    }
+
+ */
+
+    // 右ボタン（次へ）がクリックされたとき
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            productCurrentIndex++; // インデックスを＋1する
+
+            // 最後の画像を超えたら、最初の画像（0）に戻す（無限ループ）
+            if (productCurrentIndex >= units.length) {
+                productCurrentIndex = 0;
+            }
+
+            // スライド処理関数を呼び出して移動！
+            moveToSlide(productCurrentIndex);
+        });
+    }
+
+    // 左ボタン（前へ）がクリックされたとき
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            productCurrentIndex--; // インデックスを－1する
+
+            // 0未満（最初のより前）になったら、最後の画像（一番後ろ）に戻す（無限ループ）
+            if (productCurrentIndex < 0) {
+                productCurrentIndex = units.length - 1;
+            }
+
+            // スライド処理関数を呼び出して移動！
+            moveToSlide(productCurrentIndex);
+        });
+    }
 });
 
     // 2. コンソールに出力して確認！
